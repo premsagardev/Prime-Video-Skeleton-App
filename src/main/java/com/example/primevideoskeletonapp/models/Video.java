@@ -3,7 +3,6 @@ package com.example.primevideoskeletonapp.models;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
 import java.util.Date;
 import java.util.List;
@@ -26,7 +25,7 @@ public class Video {
     @JoinColumn(name = "uploadedBy_userId")
     private User uploadedBy;
 
-    @OneToMany(mappedBy = "Video", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "video", cascade = CascadeType.ALL)
     private List<VideoFormat> formats;
 
 }

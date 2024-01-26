@@ -3,12 +3,13 @@ package com.example.primevideoskeletonapp.models;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
 @Getter
 @Setter
 @Entity
 public class VideoFormat {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long formatId; // Primary Key
